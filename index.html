@@ -1,8 +1,27 @@
 <html>
 <head>
+  <base href="/" target="_blank">
+  <title id='Description'>Housie Game</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery.ui.widget.min.js"></script>
+  <script src="index.js"></script>
 </head>
 
 <body>
-  <div id="app">Hello</div>
+  <div class="CanvasGrid">
+    <header id="ToolBar">
+      <span style="margin-left: 5px;">Housie</span>
+      <button style="position: absolute; float: right; right: 5px;">RESET</button>
+    </header>
+    <main>
+      <div class="dice-ball">10</div>
+      <div class="hgrid"></div>
+    </main>
+  </div>
 </body>
 </html
