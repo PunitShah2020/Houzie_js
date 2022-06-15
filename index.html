@@ -15,12 +15,17 @@
 <body>
   <div class="CanvasGrid">
     <header id="ToolBar">
-      <span style="margin-left: 5px;">Housie</span>
-      <button style="position: absolute; float: right; right: 5px;">RESET</button>
+      <label id="HCounter">0 / 90</label>
+      <span style="margin: auto; color: #add; font: 1rem 'Open Sans'; font-weight: 800;">Housie</span>
+      <button id="btnReset" style="margin-right: 5px;">RESET</button>
     </header>
-    <main>
-      <div class="dice-ball">10</div>
-      <div class="hgrid"></div>
+    <main style="grid-area: gdMain;">
+      <div id="DiceBall"></div>
+      <div id="HGrid"></div>
+      <div style="margin-top: 10px; padding: 5px; background: #bbb; color: #366; font-style: italic;">
+        Last few Numbers:
+        <label id="lblPrevNum" style="display: block; padding: 5px; font: 2rem calibri; font-weight: 600; color: #777;"></label>
+      </div>
     </main>
   </div>
 </body>

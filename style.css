@@ -4,44 +4,97 @@
 }
 body {
   margin: 0;
-  overflow: hidden;
-  background: #d0d0d0;
+  overflow: auto;
+  background: black;
   font: 12pt 'Open Sans';
-}
-
-#ToolBar {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background: #699;
 }
 
 .CanvasGrid {
   display: grid;
   grid-template-rows: 2rem auto 1.5rem;
-  grid-template-areas: 'gdToolbar' 'gdHGrid' 'gdStatus';
-  width: 100vw;
+  grid-template-areas: 'gdToolbar' 'gdMain' 'gdStatus';
+  width: 600px;
   height: 100vh;
-  overflow: auto;
+  margin: 0 auto;
   border: none;
+  background: #e0e0e0;
   font: 10pt Arial;
 }
-
-.dice-ball {
+#ToolBar {
+  grid-area: gdToolbar;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  background: #669;
+}
+#HCounter {
+  margin-left: 5px;
+  padding: 2px 5px;
+  border: 1px solid #88b;
+  font: 1rem 'Open Sans';
+  background: #0001;
+  color: white;
+}
+#DiceBall {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
+  margin: 2px auto;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 1px solid #999;
-  background: white;
-  font-size: 3.5rem;
+  border: 1px solid #36f;
+  background: #fc0;
+  color: #444;
+  font: 5rem 'Open Sans';
   font-weight: 800;
+  cursor: pointer;
+  box-shadow: rgb(150, 100, 0) 0px 0px 5px 0px;
+}
+#HGrid {
+  display: grid;
+  width: 600px;
+  margin: 5px auto 0;
+  grid-template-columns: repeat(10, 10%);
+  border: 0px solid #6996;
+  background: #c99;
+  overflow: auto;
+}
+.HBox {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  color: #755;
+  font: 2rem 'Open Sans';
+  font-weight: 600;
+}
+.HDrawn {
+  background: #0a0;
+  color: white;
 }
 
-.HGrid {
-  display: grid;
-  grid-template-columns: repeat(10, 10%);
+@media only screen and (max-width: 600px) {
+  body {
+    overflow: auto;
+  }
+  .CanvasGrid {
+    width: 100vw;
+  }
+  #DiceBall {
+    width: 100px;
+    height: 100px;
+    font-size: 3.5rem;
+  }
+  #HGrid {
+    width: 100%;
+    min-width: 400px;
+  }
+  .HBox {
+    height: 2rem;
+    font-size: 1rem;
+  }
 }
